@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facebook Ad Library Scraper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    input[type="url"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ad Library Scraper</h1>
+    <form action="https://meta-nine-rust.vercel.app/webhook/facebook-ads" method="POST">
+      <label for="adLibraryUrl">Facebook Ad Library URL</label>
+      <input
+        type="url"
+        id="adLibraryUrl"
+        name="adLibraryUrl"
+        placeholder="https://www.facebook.com/ads/library/…"
+        required
+      />
+      <button type="submit">Start Scrape</button>
+    </form>
+    <div class="note">
+      Enter any Page's Ad Library URL and hit "Start Scrape."
+    </div>
+  </div>
+</body>
+</html>
